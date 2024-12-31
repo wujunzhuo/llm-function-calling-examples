@@ -8,11 +8,18 @@ YoMo support multiple LLM providers, like Ollama, Mistral, Llama, Azure OpenAI, 
 
 ## Examples List
 
-- [tool-get-utc-time](./tool-get-utc-time): Get the UTC time by city name.
-- [tool-currency-converter](./tool-currency-converter): Currency Calculator by 3rd party API.
-- [tool-get-weather](./tool-get-weather): Get the weather information by city name by 3rd party API.
-- [tool-timezone-calculator](./tool-timezone-calculator): Calculate the timezone for a specific time.
-- [tool-get-ip-and-latency](./tool-get-ip-and-latency): Get IP and Latency by give website name like "Nike" and "Amazone" by `ping` command.
+### Node.js
+
+- [node-tool-get-weather](./node-tool-get-weather): Get the weather information by city name by 3rd party API.
+- [node-tool-currency-converter](./node-tool-currency-converter): Currency Calculator by 3rd party API.
+
+### Golang
+
+- [golang-tool-get-weather](./golang-tool-get-weather): Get the weather information by city name by 3rd party API.
+- [golang-tool-currency-converter](./golang-tool-currency-converter): Currency Calculator by 3rd party API.
+- [golang-tool-get-utc-time](./golang-tool-get-utc-time): Get the UTC time by city name.
+- [golang-tool-timezone-calculator](./golang-tool-timezone-calculator): Calculate the timezone for a specific time.
+- [golang-tool-get-ip-and-latency](./golang-tool-get-ip-and-latency): Get IP and Latency by give website name like "Nike" and "Amazone" by `ping` command.
 
 ## Self Hosting
 
