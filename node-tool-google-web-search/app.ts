@@ -8,7 +8,7 @@ if (env.https_proxy) {
   setGlobalDispatcher(dispatcher);
 }
 
-export const description = `A custom search engine designed to answer questions about current events. The input is a search query, and the output is a JSON array of results.`;
+export const description = `You are an expert web research AI, designed to generate a response based on provided search results. Keep in mind today is ${new Date().toISOString()}.`;
 
 export type Argument = {
   /**
@@ -31,21 +31,28 @@ export async function handler(args: Argument) {
         .filter((item) => item.link)
         .map(async (item) => {
           console.log(`Reading link [${item.title}]: ${item.link}`)
-          const html = await fetchWebPage(item.link as string)
-          if (!html) {
-            return { title: "", link: "", content: "" }
-          }
-          const content = extractHtml(html, item.snippet as string)
-
-          console.log(`\t->[${content.title}] ${content.content.slice(0, 100)}`)
-
-          return {
-            link: item.link,
-            title: content.title,
-            content: content.content || item.snippet,
+          try {
+            const html = await fetchWebPage(item.link as string)
+            const content = extractHtml(html, item.snippet as string)
+  
+            console.log(`\t->[${content.title}] ${content.content.slice(0, 100)}`)
+  
+            return {
+              link: item.link,
+              title: content.title,
+              content: content.content || item.snippet,
+            }
+          } catch (ex) {
+            console.error('\t[EE] Error reading link', ex)
+            return {
+              link: item.link,
+              title: item.title,
+              content: item.snippet,
+            }
           }
         })
     )
+
     result = result.filter((item) => item.title)
     console.log("fetch result", result.length)
     return JSON.stringify(result)
