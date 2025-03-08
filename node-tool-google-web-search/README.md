@@ -12,7 +12,7 @@ GOOGLE_API_KEY=
 GOOGLE_CSE_ID=
 ```
 
-Other environment variables can be found in the [vivgrid dashboard](https://dashboard.vivgrid.com/) serverless page
+Other environment variables can be found in the [vivgrid console](https://console.vivgrid.com/) serverless page
 
 ## Development
 

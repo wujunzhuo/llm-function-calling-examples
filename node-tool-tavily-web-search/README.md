@@ -11,7 +11,7 @@ YOMO_SFN_CREDENTIAL=<your-yomo-sfn-credential>
 TAVILY_API_KEY=
 ```
 
-Other environment variables can be found in the [vivgrid dashboard](https://dashboard.vivgrid.com/) serverless page
+Other environment variables can be found in the [vivgrid console](https://console.vivgrid.com/) serverless page
 
 ## Development
 

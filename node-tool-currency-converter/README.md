@@ -11,7 +11,7 @@ YOMO_SFN_CREDENTIAL=<your-yomo-sfn-credential>
 OPENEXCHANGERATES_API_KEY=<your-openexchangerates.org-api-key>
 ```
 
-Other environment variables can be found in the [vivgrid dashboard](https://dashboard.vivgrid.com/) serverless page
+Other environment variables can be found in the [vivgrid console](https://console.vivgrid.com/) serverless page
 
 ## Development
 

@@ -12,7 +12,7 @@ YOMO_SFN_ZIPPER=zipper.vivgrid.com:9000
 YOMO_SFN_CREDENTIAL=<your-yomo-sfn-credential>
 ```
 
-You can find other environment variables in the serverless page of [vivgrid dashboard](https://dashboard.vivgrid.com/).
+You can find other environment variables in the serverless page of [vivgrid console](https://console.vivgrid.com/).
 
 ### 2. Resend API Key
 
