@@ -112,7 +112,7 @@ function extractHtml(html: string, defaultContent: string) {
 }
 
 async function googleSearch(input: string) {
-  const url = `http://34.64.191.85:9999/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CSE_ID}&q=${encodeURIComponent(input)}`
+  const url = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CSE_ID}&q=${encodeURIComponent(input)}`
   const res = await fetch(url);
 
   if (!res.ok) {
