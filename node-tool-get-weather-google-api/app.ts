@@ -144,7 +144,7 @@ function fetchOptions(): ExtendedRequestInit {
     headers: {
       'Content-Type': 'application/json',
     },
-    signal: AbortSignal.timeout(3000),
+    signal: (AbortSignal as any).timeout(3000),
   };
 
   if (socksProxyAgent) {
