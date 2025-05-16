@@ -17,7 +17,7 @@ Before running this tool, create a `.env` file and set the following environment
 
 ```
 YOMO_SFN_NAME=postgres-db-tool
-YOMO_SFN_ZIPPER="zipper.vivgrid.com:9000"
+YOMO_SFN_ZIPPER=zipper.vivgrid.com:9000
 YOMO_SFN_CREDENTIAL=<your-yomo-sfn-credential>
 
 # PostgreSQL database connection URL
@@ -43,7 +43,7 @@ Detailed CLI usage instructions can be found in the [YoMo CLI documentation](htt
 ### 2. Run the function
 
 ```bash
-yomo run app.ts -n postgres-db-tool
+yomo run -n postgres-db-tool
 ```
 
 ## Function Call Examples

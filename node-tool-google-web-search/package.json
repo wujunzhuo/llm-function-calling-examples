@@ -1,7 +1,7 @@
 {
-  "name": "tool-node-get-utc-time",
+  "name": "tool-node-google-web-search",
   "version": "1.0.0",
-  "description": "LLM Function Calling - Get UTC Time",
+  "description": "LLM Function Calling - Google Web Search",
   "main": ".wrapper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@yomo/sfn": "^1.0.7"
+    "@yomo/sfn": "^1.0.7",
+    "cheerio": "^1.0.0"
   }
 }

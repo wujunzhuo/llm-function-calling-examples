@@ -6,7 +6,7 @@ You can obtain `TAVILY_API_KEY` from [tavily](https://tavily.com/), then, add it
 
 ```sh
 YOMO_SFN_NAME=web-search
-YOMO_SFN_ZIPPER="zipper.vivgrid.com:9000"
+YOMO_SFN_ZIPPER=zipper.vivgrid.com:9000
 YOMO_SFN_CREDENTIAL=<your-yomo-sfn-credential>
 TAVILY_API_KEY=
 ```
@@ -26,7 +26,7 @@ Detail usages of the cli can be found on [Doc: YoMo CLI](https://yomo.run/docs/c
 ### 2. Attach this function calling to your LLM Bridge
 
 ```bash
-yomo run app.ts -n llm-tool-web-search
+yomo run -n llm-tool-web-search
 ```
 
 ### 3. Trigger the function calling
