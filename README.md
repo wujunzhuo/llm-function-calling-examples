@@ -80,6 +80,7 @@ Explore real-world serverless functions organized by category:
 ### 🔍 **Web Search & Network**
 | Function | Language | Description |
 |----------|----------|-------------|
+| [node-tool-exa-web-search](./node-tool-exa-web-search) | TypeScript | Search using [Exa](https://exa.ai) |
 | [node-tool-google-web-search](./node-tool-google-web-search) | TypeScript | Search using Google Custom Search |
 | [node-tool-tavily-web-search](./node-tool-tavily-web-search) | TypeScript | Web search via [Tavily](https://tavily.com/) |
 | [node-tool-duckduckgo-web-search](./node-tool-duckduckgo-web-search) | TypeScript | Privacy-focused DuckDuckGo search |
