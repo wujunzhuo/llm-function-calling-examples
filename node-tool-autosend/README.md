@@ -27,6 +27,7 @@ You can test this integration using the [Alchemist Tool](https://alchemist.vivgr
 **Result:**
 
 <img src="https://cdn.vivgrid.com/p/20251118.2.png" alt="Send email via Autosend on vivgrid" />
+
 ## Template-Based Email Sending
 
 Send emails using pre-configured templates for consistent branding and messaging.
