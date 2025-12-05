@@ -41,9 +41,6 @@ type LLMArguments struct {
 // Handler orchestrates the core processing logic of this function.
 // - ctx.ReadLLMArguments() parses LLM Function Calling Arguments (skip if none).
 // - ctx.WriteLLMResult() sends the retrieval result back to LLM.
-// - ctx.Tag() identifies the tag of the incoming data.
-// - ctx.Data() accesses the raw data.
-// - ctx.Write() forwards processed data downstream.
 func Handler(ctx serverless.Context) {
 	var p LLMArguments
 	// deserilize the arguments from llm tool_call response

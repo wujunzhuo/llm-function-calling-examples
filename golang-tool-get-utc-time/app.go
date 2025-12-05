@@ -30,6 +30,7 @@ func InputSchema() any {
 func Handler(ctx serverless.Context) {
 	// get current time
 	now := fmt.Sprintf("current UTC time is %s", time.Now().UTC().Format(time.RFC3339))
+	fmt.Println(now)
 	// return to llm automatically by yomo
 	ctx.WriteLLMResult(now)
 }
