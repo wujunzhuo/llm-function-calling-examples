@@ -33,8 +33,11 @@ async function exaSearch(query: string) {
     },
     body: JSON.stringify({
       query,
-      numResults: 10,
-      type: 'auto'
+      numResults: 5,
+      type: 'auto',
+      contents: {
+        highlights: true
+      }
     })
   })
 
@@ -49,7 +52,8 @@ async function exaSearch(query: string) {
       title: result.title,
       url: result.url,
       publishedDate: result.publishedDate,
-      author: result.author
+      author: result.author,
+      contents: result.highlights
     }))
   }
 }
