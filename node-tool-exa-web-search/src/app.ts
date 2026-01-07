@@ -25,7 +25,6 @@ async function exaSearch(query: string) {
   }
 
   console.log(`Performing web search for: ${query}`)
-  
   const response = await fetch('https://api.exa.ai/search', {
     method: 'POST',
     headers: {
@@ -44,7 +43,6 @@ async function exaSearch(query: string) {
   }
 
   const data = await response.json()
-  
   return {
     requestId: data.requestId,
     results: data.results.map((result: any) => ({
