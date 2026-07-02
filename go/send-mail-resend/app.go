@@ -11,23 +11,6 @@ import (
 // Description outlines the functionality for the LLM Function Calling feature.
 const Description = `Generate and send emails. Please provide the recipient's email address, and you should help generate appropriate subject and content. If no recipient address is provided, You should ask to add one. When you generate the subject and content, you should send it through the email sending function.`
 
-var client *resend.Client
-
-// Init is an optional function invoked during the initialization phase of the
-// sfn instance. It's designed for setup tasks like global variable
-// initialization, establishing database connections, or loading models into
-// GPU memory. If initialization fails, the sfn instance will halt and
-// terminate. This function can be omitted if no initialization tasks are
-// needed.
-func Init() error {
-	if _, ok := os.LookupEnv("RESEND_API_KEY"); !ok {
-		return fmt.Errorf("RESEND_API_KEY is not set")
-	}
-
-	client = resend.NewClient(os.Getenv("RESEND_API_KEY"))
-	return nil
-}
-
 // Arguments defines the arguments for the LLM Function Calling.
 type Arguments struct {
 	To      string `json:"to" jsonschema:"description=The recipient's email address"`
@@ -64,6 +47,13 @@ func sendEmail(args Arguments) (Result, error) {
 		Subject: args.Subject,
 		Html:    fmt.Sprintf("<p>%s</p>", args.Body),
 	}
+
+	resendApiKey, ok := os.LookupEnv("RESEND_API_KEY")
+	if !ok {
+		return Result{}, fmt.Errorf("RESEND_API_KEY is not set")
+	}
+
+	client := resend.NewClient(resendApiKey)
 
 	resp, err := client.Emails.Send(params)
 	if err != nil {
